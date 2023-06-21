@@ -1,0 +1,22 @@
+<?php
+
+Пространство имен приложения\ контроллер;
+
+Приложение использует\Form\OrderType;
+Symfony использует\Bundle\FrameworkBundle\Controller\AbstractController;
+Symfony использует\Компонент\Маршрутизацию\Аннотацию\Маршрут;
+
+класс RouteController расширяет AbstractController
+{
+    /**
+ * @Route("/маршруты", name="маршруты")
+     */
+    функция индексирования public()
+    {
+        это $return->render('маршрут/индекс.html.twig', [
+            'controller_name' => 'RouteController',
+            'form_order' => $this->CreateForm(OrderType::class)->CreateView(),
+            'is_routes' => 'active'
+        ]);
+    }
+}

@@ -1,0 +1,128 @@
+<?php
+
+Пространство имен приложения\ контроллер;
+
+Приложение использует\Entity\ContactFeedbackStatus;
+Приложение использует\Форму\ContactFeedbackType;
+Приложение использует\Form\OrderType;
+Приложение использует\ Сервисы\FeedbackMailer;
+Доктрина использования\ORM\EntityManagerInterface;
+Symfony использует\Bundle\FrameworkBundle\Controller\AbstractController;
+Symfony использует\Component\HttpFoundation\Request;
+Symfony использует\Component\HttpFoundation\Response;
+Symfony использует\Компонент\Маршрутизацию\Аннотацию\Маршрут;
+Symfony использует\Component\VarDumper\VarDumper;
+
+класс AboutController расширяет AbstractController
+{
+    /**
+ * @Route("/about", name="о программе")
+     */
+    функция индексирования public()
+    {
+        это $return->render('about/index.html.twig', [
+            'имя_контроллера' => 'О контроллере',
+            'form_order' => $this->CreateForm(OrderType::class)->CreateView(),
+            'is_about' => 'активный'
+        ]);
+    }
+
+    /**
+ * @Route("/руководители", name="руководители")
+     */
+    руководители функционируют публично()
+    {
+        это $return->render('about/executives.html.twig', [
+            'имя_контроллера' => 'О контроллере',
+            'form_order' => $this->CreateForm(OrderType::class)->CreateView(),
+            'is_about' => 'активный'
+        ]);
+    }
+
+    /**
+ * @Route("/исследование", name="исследование")
+     */
+    функция изучения общедоступна()
+    {
+        это $return->render('about/study.html.twig', [
+            'имя_контроллера' => 'О контроллере',
+            'form_order' => $this->CreateForm(OrderType::class)->CreateView(),
+            'is_about' => 'активный'
+        ]);
+    }
+
+    /**
+ * @Route("/documentation", name="документация")
+     */
+    функцияпубликации  документации()
+    {
+        это $return->render('about/documentation.html.twig', [
+            'имя_контроллера' => 'О контроллере',
+            'form_order' => $this->CreateForm(OrderType::class)->CreateView(),
+            'is_about' => 'активный'
+        ]);
+    }
+
+    /**
+ * @Route("/контакты", name="контакты")
+ * запрос @param $запрос
+ * @параметр EntityManagerInterface $em
+ * @param FeedbackMailer $Почтовый редактор обратной связи
+ * @вернуть ответ
+     */
+    функцияконтактов  общедоступна(Request $request, EntityManagerInterface $em, FeedbackMailer $feedbackMailer)
+    {
+        $formFeedback = $this->CreateForm(ContactFeedbackType::class);
+        $formFeedback->handleRequest($запрос);
+
+        if($formFeedback->isubmitted() && $formFeedback->isValid()) {
+            $feedback = $formFeedback->getData();
+
+            $feedbackDefaultStatus = $em->getRepository(ContactFeedbackStatus::class)->findOneBy(['name' => 'Не обработано']);
+            $обратная связь->setStatus($feedbackDefaultStatus);
+
+            $em->сохраняться($обратная связь);
+            $em->flush();
+
+            this$->addFlash('form.feedback.success', "Спасибо за сообщение! Оно будет обязательно рассмотрено");
+
+            if(isset($_ENV['APP_ENV']) && $_ENV['APP_ENV'] === 'prod') {
+                $feedbackMailer->отправить($обратная связь);
+            }
+
+            это $return->Перенаправление('contacts');
+        }
+
+        это $return->render('about/contacts.html.twig', [
+            'имя_контроллера' => 'О контроллере',
+            'form_feedback' => $formFeedback->CreateView(),
+            'form_order' => $this->CreateForm(OrderType::class)->CreateView(),
+            'is_contacts' => 'активный'
+        ]);
+    }
+
+    /**
+ * @Route("/services", name="сервисы")
+     */
+    сервисы функционируют общедоступно()
+    {
+         это $return->render('about/services.html.twig', [
+            'имя_контроллера' => 'О контроллере',
+            'form_order' => $this->CreateForm(OrderType::class)->CreateView(),
+            'is_services' => 'active'
+        ]);
+    }
+
+    /**
+ * @Route("пользовательское соглашение", name="пользовательское соглашение")
+ * запрос @param $запрос
+ * @вернуть ответ
+     */
+      общедоступна( request-а) {
+        это $return->render('about/user-agreement.html.twig', [
+            'form_order' => $this->CreateForm(OrderType::class)->CreateView(),
+            'redirect_url' => $request->headers->get('referer'),
+            'is_about' => 'активный'
+        ]);
+    }
+}

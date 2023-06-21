@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+<глава>
+ <meta charset="UTF-8">
+ <meta name="роботы" content="все" />
+
+ <meta name="description" content="{% block meta_description %}Компания МУП «Экспресс» предоставляет транспортное обслуживание предприятий,
+ юридических и физических лиц, оказывая услуги аренды автобусов с водителем.{% endblock %}">
+
+ <meta name="keywords" content="{% block meta_keywords %}муп экспресс, дзержинск, автотранспорт, автобус, сайт муп экрспресс, отзывы о муп,
+ оставить отзыв о муп, маршруты дзержинск троллейбус, обширный автопарк{% endblock %}">
+
+ <link rel="альтернативный" href="https://www.mupexpress52.ru " hreflang="ru-ru">
+
+ <meta name="яндекс-верификация" content="779ff6b643708e5e" />
+
+ <meta property="og:title" content="МУП Эскпресс г. Дзержинск">
+ <свойство metameta"og:url "content" и т.Д.https://mupexpress52.ru /">
+ <meta property="og:site_name" content="МУП Экспресс г. Дзержинск">
+ <meta property="og:description" content="Компания МУП «Экспресс» предоставляет транспортное обслуживание предприятий, юридических и физических лиц, оказывая услуги аренды автобусов с водителем.">
+ <свойство metameta"og:type "content"веб--сайт, на котором он находится", ",",",",",",",",",",",",">
+ <мета свойство="OG:изображение" содержание="https://mupexpress52.ru/img/logo.png">
+
+ <meta name="viewport" content="width=ширинаустройства, начальный масштаб= 1, усадка=нет">
+ <ссылка href="{{ asset('img/favicon.ico') }}" rel="значок быстрого доступа" type="image/vnd.microsoft.icon">
+
+ <title>{% block title %}Неофициальный сайт - МУП Экспресс г.Дзержинск{% endblock %}</title>
+
+ {% блочных таблиц стилей %}
+ <ссылка отн="таблица стилей" с href="{{ Asset(в"УСБ/начальной загрузки.в CSS") }}">
+
+        <!-- стилизация иконок -->
+ <ссылка отн="таблица стилей" с href="{{ Asset(в"поставщикам/linericon/стиль.в CSS") }}">
+ <ссылка отн="таблица стилей" с href="{{ Asset(в"УСБ/шрифт-удивительным.мин. в CSS") }}">
+
+        <!-- Стилизация каруселей -->
+ <ссылка отн="таблица стилей" с href="{{ Asset(в"поставщикам/сова-карусель/сова.карусель.мин. в CSS") }}">
+
+        {# <!-- стилизация картинок??? -->#}
+        {# <ссылка rel= "таблица стилей" href="{{ asset("поставщики /лайтбоксы/simpleLightbox.css") }}">#}
+
+        <!-- стилизация выпадающих списков -->
+ <ссылка отн="таблица стилей" с href="{{ Asset(в"поставщикам/хороший-выбираем/УСБ/Ницца-выберите.в CSS") }}">
+
+        {# <!-- css анимации -->#}
+        {# <ссылка rel= "таблица стилей" href="{{ asset("поставщики/animate-css/animate.css") }}">#}
+
+ <ссылка отн="таблица стилей" с href="{{ Asset(в"поставщикам/jQuery-интерфейс/jQuery-интерфейс.в CSS") }}">
+
+        <!-- основной css -->
+ <ссылка отн="таблица стилей" с href="{{ Asset(в"УСБ/стиль.в CSS") }}">
+ <ссылка отн="таблица стилей" с href="{{ Asset(в"УСБ/отзывчивый.в CSS") }}">
+ {% конечный блок %}
+</head>
+<тело>
+{% заголовок блока %}
+    <!-- ================ Область меню заголовка ================= -->
+ <класс заголовка=" и т.Д.>
+ <div class="main_menu">
+ <nav class="панель навигации navbar-развернуть-lg navbar-light">
+ <div class="контейнер">
+                    <!-- Бренд и переключатель сгруппированы для лучшего отображения на мобильных устройствах -->
+ <a class="navbar-brand logo_h" href="{{ path("index") }}" title="МУП Экспресс">
+ <img src="{{ asset('img/logo.png') }}" height="58" alt="МУП Экспресс">
+ </a>
+ класс кнопки="navbar-toggler" type="кнопка" data-toggle="свернуть"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Переключать навигацию">
+ <span class="панельзначков"></span>
+ <span class="панельзначков"></span>
+ <span class="панельзначков"></span>
+ </кнопка>
+                    <!-- Соберите навигационные ссылки, формы и другой контент для переключения -->
+ {% включить 'модули/header.menu.html.twig' %}
+
+ </div>
+ </навигация>
+ </div>
+ </заголовок>
+    <!-- ================ Область меню заголовка ================= -->
+{% конечный блок %}
+
+{% тело блока %}{% конечный блок %}
+
+{% блокировать нижний колонтитул %}
+    <!-- ================ область начального нижнего колонтитула ================= -->
+ <класс нижнего колонтитула="область нижнего колонтитула p-5">
+ <div class="контейнер">
+ <div class="строка">
+ <div class="col-lg-2 col-md-6 col-sm-12 mb-5">
+ <a class="панель навигации-логотип бренда" href="{{ path('index') }}" title="mУП Экспресс">
+ <img src="{{ asset('img/logo.png') }}" height="58" alt="МУП Эксресс">
+ </a>
+ </div>
+ <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+ <div class="виджет с одним нижним колонтитулом">
+ <h6 class="footer_title">О нас</h6>
+ <p>Предприятие МУП "ЭКСПРЕСС" зарегистрирована 14 мая 2003 года местным органом ФНС —
+ Межрайонная инспекция Федеральной налоговой службы №15 по Нижегородской области. Полное
+ официальное наименование — МУНИЦИПАЛЬНОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ "ЭКСПРЕСС" Г. ДЗЕРЖИНСК.</p>
+ </div>
+ </div>
+ <div class="смещение-lg-2 col-lg-4 смещение-md-0 col-md-6 col-sm-12">
+ <div class="виджет с одним нижним колонтитулом">
+ <h6 class="footer_title">Контакты</h6>
+ <ul class="footer_links">
+ <li class="footer_links_item"><a href="tel:+78313264875"><i class="fa fa-phone"></i>Приемная
+ - 8 (8313) 26-48-75</a></li>
+ <li class="footer_links_item"><a href="тел:+78313262875"><i class="fa fa-phone"></i>Бухгалтерия
+ – 8 (8313) 26-28-75</a></li>
+ <li class="footer_links_item"><a href="тел:+78313264317"><i class="fa fa-phone"></i>Отдел
+ кадров – 8 (8313) 26-43-17</a></li>
+ <li class="footer_links_item"><a href="тел:+78313254130"><i class="fa fa-phone"></i>Коммерчерский
+ отдел – 8 (8313) 25-41-30</a></li>
+ <li class="footer_links_item"><a href="mailto:dttu@rambler.ru "><i class="fa fa-at"></i> Почта:
+ dttu@rambler.ru </a></li>
+ <li class="footer_links_item"><a href="https://goo.gl/maps/zhSHX8Rb3onaHZQH6"
+                                                             target="_blank"><i class="fa fa-map-marker"></i>г.
+ Дзержинск, Нижегородское шоссе, 5</a></li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ <div class="нижний колонтитул строки-нижний d-flex выравнивание-содержимого-между элементами-выравнивание-по центру">
+ <p class="нижний колонтитул lg-12-текст в центре текста">
+ Авторское право и копирование<скрипт>документа.написать(новая дата().Получить полный год());</скрипт>
+ Все права защищены
+ </p>
+ </div>
+ </div>
+ </нижний колонтитул>
+    <!-- ================ Область нижнего колонтитула в конце ================= -->
+{% конечный блок %}
+
+{% блокировать модальности %}
+    <!-- ================ Окно модального заказа =================== -->
+ <div class="модальное затухание" id="exampleModalCenter" tabindex="-1" роль="диалог"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLongTitle">Заказать автобус</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {% for message in app.flashes('form.order.success') %}
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            {{ message }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    {% endfor %}
+                    {{ form_start(form_order, {'attr': {'id': form_order.vars.id, 'action': path("order")}}) }}
+                    <div class="form-group">
+                        {{ form_label(form_order.name, null, {'label_attr': {'class': 'mb-0'}}) }}
+                        {{ form_widget(form_order.name, {'attr': {'class': 'form-control mb-2 text-secondary'}}) }}
+                    </div>
+                    <div class="form-group">
+ {{ form_label(form_order.address_from, null, {'label_attr': {'class': 'mb-0'}}) }}
+ {{ form_widget(form_order.address_from, {'attr': {'class': 'form-control mb-2 text-secondary'}}) }}
+ </div>
+ <div class="form-group">
+ {{ form_label(form_order.address_at, null, {'label_attr': {'class': 'mb-0'}}) }}
+ {{ form_widget(form_order.address_at, {'attr': {'класс': 'текст управления формой mb-2-вторичный'}}) }}
+ </div>
+ <div class="form-group">
+ {{ form_label(form_order.date, null, {'label_attr': {'class': 'mb-0'}}) }}
+ {{ form_widget(form_order.date, {'attr': {'class': 'форма-управляющий текст-вторичный '}}) }}
+ </div>
+ <div class="form-group">
+ {{ form_label(form_order.time_from, null, {'label_attr': {'class': 'mb-0'}}) }}
+ <div class="группа ввода">
+ <div class="input-group-prepend">
+ <span class="группа ввода-текст" style="размер шрифта: 0,99 rem">
+ <i class="fa fa-clock-o"></i></span>
+ </div>
+ {{ form_widget(form_order.time_from, {'attr': {'class': 'текст управления формой-вторичный'}}) }}
+ </div>
+ </div>
+ <div class="form-group">
+ {{ form_label(form_order.time_at, null, {'label_attr': {'class': 'mb-0'}}) }}
+ <div class="группа ввода">
+ <div class="input-group-prepend">
+ <span class="группа ввода-текст" style="размер шрифта: 0,99 rem">
+ <i class="fa fa-clock-o"></i></span>
+ </div>
+ {{ form_widget(form_order.time_at, {'attr': {'class': 'текст управления формой-вторичный'}}) }}
+ </div>
+ </div>
+ <div class="form-group">
+ {{ form_label(form_order.email, null, {'label_attr': {'class': 'mb-0'}}) }}
+ {{ form_widget(form_order.email, {'attr': {'класс': 'текст управления формой mb-2-вторичный'}}) }}
+ </div>
+ <div class="form-group">
+ {{ form_label(form_order.phone, null, {'label_attr': {'class': 'mb-0'}}) }}
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" style="font-size: 0.99rem">+7</span>
+                            </div>
+                            {{ form_widget(form_order.phone, {'attr': {'class': 'form-control text-secondary'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(form_order.number, null, {'label_attr': {'class': 'mb-0'}}) }}
+                        {{ form_widget(form_order.number, {'attr': {'class': 'form-control mb-2 text-secondary'}}) }}
+                    </div>
+                    <div class="custom-control custom-checkbox text-justify">
+                        {{ form_widget(form_order.is_confidentiality, {'attr': {'class': 'custom-control-input mb-2 text-secondary'}}) }}
+                        <label class="custom-control-label mb-0 d-inline" for="{{ form_order.is_confidentiality.vars.id }}">Я даю согласие на обработку моих персональных данных в соответствии с Федеральным законом
+                            от 27.07.2006 года №152-Ф3 "О персональных данных" на условиях и для целей, определенных в Согласии
+                            на </label>
+                        <a class="d-inline" href="{{ path('user_agreement') }}" title="">обработку персональных данных.</a>
+                        {% for message in app.flashes('form.order.is_confidentiality.error') %}
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                {{ message }}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    {{ form_end(form_order) }}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn close_btn" title="Отмена" data-dismiss="modal">Отмена</button>
+                    <button type="submit" class="btn submit_btn" title="Отправить заявку" form="{{ form_order.vars.id }}">Отправить заявку
+                    </button>
+                </div>
+ </div>
+ </div>
+ </div>
+    <!-- ================ Закрыть окно модального заказа =============== -->
+{% конечный блок %}
+
+{% блокировать javascripts %}
+    <!-- Необязательный JavaScript -->
+    <!-- сначала jQuery, затем Popper.js, затем Bootstrap JS -->
+ <script src="{{ asset("js/jquery-3.2.1.min.js") }}"></script>
+
+    <!-- Popper js - выпадающие сосбщения -->
+ <script src="{{ asset("js/popper.js") }}"></script>
+ <script src="{{ asset("js/bootstrap.min.js") }}"></script>
+
+    <!-- stellar для параллакс эффекта -->
+ <script src="{{ asset("js/stellar.js ") }}"></script>
+
+    {# <!-- скрипт для работы стилизации картинок??? -->#}
+    {# <script src="{{ asset("vendors/lightbox/simpleLightbox.min.js ") }}"></script>#}
+
+    <!-- скрипт для работы выпадающих списков -->
+ <script src="{{ asset("vendors/nice-select/js/jquery.nice-select.min.js ") }}"></script>
+
+    {# <!-- скрипты для работы с картинками ??? -->#}
+ <script src="{{ asset("vendors/isotope/imagesloaded.pkgd.min.js ") }}"></script>
+ <script src="{{ asset("vendors/isotope/isotope-min.js") }}"></script>
+
+    <!-- Скрипт для работы каруселей -->
+ <script src="{{ asset("vendors/owl-carousel/owl.carousel.min.js") }}"></script>
+
+ <script src="{{ asset("vendors/jquery-ui/jquery-ui.js") }}"></script>
+
+    <!-- Скрипт для редактирования форм -->
+ <script src="{{ asset("js/jquery.ajaxchimp.min.js") }}"></script>
+{% конечный блок %}
+
+{% блокировать базовые файлы %}
+    <!-- Пользовательские скрипты -->
+ <script src="{{ asset("js/theme.js ") }}"></script>
+{% конечный блок %}
+ {% если app_env != 'dev' %}
+        <!-- Яндекс.Счетчик метрики -->
+ <script type="текст/javascript" >
+ (функция(m,e,t, r,i,k,a){m[i]=m[i]||функция(){(m[i].a=m[i].a||[]).push(аргументы)};
+ m[i].l=1*новая дата();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r, a.parentNode.insertBefore(k,a)})
+ (окно, документ, "скрипт", "https://mc.yandex.ru/metrika/tag.js ", "ym");
+            ym(62489503, "инициализация", {
+ карта кликов:верно,
+ Ссылки на треки:истинны,
+ Точный отскок:верно,
+ веб-визор:верно
+            });
+ </скрипт>
+ <noscript><div><img src="https://mc.yandex.ru/watch/62489503 " style="позиция: абсолютная; слева:-9999px;" alt="" /></div></noscript>
+        <!-- /Яндекс.Счетчик метрики -->
+ {% endif %}
+</тело>
+</html>
